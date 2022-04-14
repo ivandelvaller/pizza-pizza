@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Pizza!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cffccf5116.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <span>Mendoza</span>
+            <span>Corporation</span>
+        </div>
+        <div class="slogan">
+            <span>Because every pizza should be possible!</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="step first-step">
+            <div class="first-step-container">
+                <h4>Type of pizza</h4>
+                <div class="step-option">
+                    <input type="radio" name="pizza-button" value="vegetarian">
+                    <div>Vegetarian &#128536;</div>
+                </div>
+                <div class="step-option">
+                    <input type="radio" name="pizza-button" value="traditional" checked>
+                    <div>Traditional &#128515;</div>
+                </div>
+                <div class="step-option">
+                    <input type="radio" name="pizza-button" value="exotic">
+                    <div>Exotic &#128527;</div>
+                </div>
+            </div>
+
+            <div class="first-step-container">
+                <h4>Size</h4>
+                <div class="step-option">
+                    <input type="radio" name="size-button" value="small" data-price="3">
+                    <div>Small &#128077;</div>
+                    <span class="step-option__price">+3$</span>
+                </div>
+                <div class="step-option">
+                    <input type="radio" name="size-button" value="medium" data-price="5" checked>
+                    <div>Medium &#128077;</div>
+                    <span class="step-option__price">+5$</span>
+                </div>
+                <div class="step-option">
+                    <input type="radio" name="size-button" value="large" data-price="10">
+                    <div>Large &#128079;</div>
+                    <span class="step-option__price">+10$</span>
+                </div>
+                <div class="step-option">
+                    <input type="radio" name="size-button" value="extra-large" data-price="17">
+                    <div>XX large &#128080;</div>
+                    <span class="step-option__price">+17$</span>
+                </div>
+            </div>
+
+            <!-- DISPLAY ONLY WEN SCREEN WIDTH IS UP 800px -->
+            <div class="second-step-container" id="first-step-dough">
+                <h4>Choose dough</h4>
+                <div id="options-dough">
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" id="crunchy" value="2">
+                        <div>Crunchy &#127770;</div>
+                        <span class="step-option__price">+2$</span>
+                    </div>
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" id="original" value="4">
+                        <div>Original &#127773;</div>
+                        <span class="step-option__price">+4$</span>
+                    </div>
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" id="double-chees" value="9">
+                        <div>Double cheese &#127773;&#127773;</div>
+                        <span class="step-option__price">+9$</span>
+                    </div>
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" id="super-sexy" value="15">
+                        <div>No way! Super sexy extra cheese! &#128525;</div>
+                        <span class="step-option__price">+15$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DISPLAY ONLY FOR MOBILE -->
+        <div class="step second-step">
+            <div class="step-header">
+                <span class="close-step" data-close="dough">hide</span>
+            </div>
+            <div class="second-step-container" id="dough-container">
+                <h4>Choose dough</h4>
+                <div id="mobile-dough-options">
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" value="crunchy" data-price="2" checked>
+                        <div>Crunchy &#127770;</div>
+                        <span class="step-option__price">+2$</span>
+                    </div>
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" value="original" data-price="4">
+                        <div>Original &#127773;</div>
+                        <span class="step-option__price">+4$</span>
+                    </div>
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" value="double-cheese" data-price="9">
+                        <div>Double cheese &#127773;&#127773;</div>
+                        <span class="step-option__price">+9$</span>
+                    </div>
+                    <div class="step-option">
+                        <input type="radio" name="dough-button" value="super-sexy" data-price="15">
+                        <div id="step-option-short-super-sexy">Super sexy extra cheese! &#128525;</div>
+                        <div id="step-option-long-super-sexy">No way! Super sexy extra cheese! &#128525;</div>
+                        <span class="step-option__price">+15$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="topics">
+                <div class="step-header">
+                    <span class="close-step" data-close="pizza">hide</span>
+                </div>
+                <h4>Choose your topics</h4>
+                <div id="mobile-pizza-options">
+                    <div id="topic-list-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="topics">
+                <div class="step-header">
+                    <span class="close-step" data-close="new-topic">hide</span>
+                </div>
+                <h4>Add custom topics!</h4>
+                <span>If these are not enough for you, go ahead adding your own topics here below.</span>
+                <div id="mobile-new-topic-options">
+                    <input type="text" name="add-topic" id="add-topic-input">
+                    <button class="button" id="add-topic-button">Add topic</button>
+                    <div id="own-topic-list-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span>All rights reserved &copy; / <a target="_blank" href="https://twitter.com/ivan_delvalle10">Twitter</a> /
+            <a target="_blank" href="https://github.com/ivandelvaller">GitHub</a> </span>
+    </footer>
+</body>
+
+</html>

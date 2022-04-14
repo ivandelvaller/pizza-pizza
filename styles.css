@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Ubuntu:ital@1&display=swap');
+
+body {
+    background-image: url("images/mobile-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: black;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+}
+
+h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    color: green;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form-group {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.border {
+    /* background-color: rgb(241, 53, 53, 0.5); */
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.brand {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+    padding: 1.5rem 0;
+    padding-bottom: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.slogan {
+    text-align: center;
+    color: rgb(181, 181, 181);
+    padding-bottom: 1rem;
+}
+
+.content {
+    min-height: 90vh;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.step {
+    display: flex;
+    padding: 1rem;
+    border-radius: 25px;
+    background: rgb(213, 213, 213, 0.95);
+}
+
+.step:not(:first-child) {
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+.step-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.step-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+}
+
+.step-option input {
+    margin-right: 0.4rem;
+}
+
+.step-option__price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(8, 57, 17);
+}
+
+#header-total {
+    display: flex;
+    max-height: 80px;
+    align-items: baseline;
+    z-index: 1000;
+    right: 0;
+    color: white;
+    padding: 1rem;
+    background-color: rgb(88, 88, 88, 0.9);
+
+    position: relative;
+    bottom: 1rem;
+    max-height: 80px;
+    justify-content: center;
+}
+
+#buy-total {
+    font-weight: bold;
+    color: rgb(8, 57, 17);
+}
+
+.close-step {
+    position: absolute;
+    background-color: brown;
+    color: white;
+    border-radius: 25px;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+    width: 90px;
+    text-align: center;
+}
+
+.close-step:hover {
+    background-color: rgb(241, 53, 53);
+}
+
+.first-step {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.second-step {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 250px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.topping-list-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-right: 0.3rem;
+}
+
+.topping-list-item input {
+    margin-right: 0.5rem;
+}
+
+.topping-info__price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(8, 57, 17);
+}
+
+.topping-list-item {
+    margin-bottom: 0.8rem;
+}
+
+.topping-info.is-new {
+    background-color: rgb(213, 213, 213, 0.95);
+    padding: 1rem;
+    border-radius: 25px;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+}
+
+.new-topping {
+    margin-left: 0.5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: rgba(92, 88, 88, 0.95);
+    color: white;
+}
+
+.delete-topping {
+    color: rgb(172, 18, 18);
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 0.3rem;
+}
+
+#add-topping-input {
+    width: 300px;
+    margin-top: 0.8rem;
+    border-radius: 25px;
+    padding: 0.3rem;
+    padding-left: 1rem;
+}
+
+#add-topping-button {
+    margin-left: 0.5rem;
+    color: rgb(8, 57, 17);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#add-topping-button:hover {
+    color: rgb(3, 9, 4);
+    transform: scale(1.1);
+}
+
+#own-topping-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0.8rem;
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.actions--button__pay {
+    background-color: rgb(0, 103, 19);
+    margin-right: 0.5rem;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    border: none;
+}
+
+.actions--button__pay:hover {
+    background-color: rgb(156, 150, 0);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    text-align: center;
+    min-height: 5vh;
+}
+
+footer > span {
+    color: gray;
+    font-size: 0.7rem;
+}
+
+#step-option-short-super-sexy {
+    display: block;
+}
+#step-option-long-super-sexy {
+    display: none;
+}
+@media (min-width: 450px) {
+    #step-option-short-super-sexy {
+        display: none;
+    }
+
+    #step-option-long-super-sexy {
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url("images/desktop-background.jpg");
+    }
+
+    #header-total {
+        position: absolute;
+        top: 1rem;
+    }
+}
+
+#first-step-dough {
+    display: none;
+}
+@media (min-width: 720px) {
+    #first-step-dough {
+        display: block;
+    }
+    .step.second-step {
+        display: none;
+    }
+}
+
+@media (max-height: 470px) {
+    #header-total {
+        position: relative;
+        bottom: 1rem;
+        max-height: 80px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 3rem;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
